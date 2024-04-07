@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Youtube Transcript Summariser</title>
+    <style>
+        h1 {
+            text-align: center;
+            padding: 10px;
+        }
+
+        body {
+            width: max-content;
+            max-width: 800px;
+            background-color: rgb(219, 209, 227);
+            font-family: sans-serif
+        }
+
+        button {
+            background-color: red;
+            color: white;
+            border-radius: 8px;
+            width: max-content;
+            height: max-content;
+            padding: 10px;
+            font-size: large;
+            margin: auto;
+            display: block;
+            border-color: coral;
+            cursor: pointer;
+        }
+
+        button[disabled] {
+            background-color: lightcoral;
+            color: white;
+            border-radius: 8px;
+            width: max-content;
+            height: max-content;
+            padding: 10px;
+            font-size: large;
+            margin: auto;
+            display: block;
+            border-color: lightpink;
+            cursor: pointer;
+        }
+
+        #summarise-container {
+            position: absolute;
+            left: 10px;
+            z-index: 999;
+        }
+
+        p {
+            font-size: medium;
+        }
+
+        h2 {
+            margin: 10px;
+            text-align: center;
+        }
+
+        #question-container {
+            display: flex;
+            justify-content: center;
+            align-items: center; /* Vertically center the container */
+            flex-direction: column; /* Align items vertically */
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        #question {
+            margin-bottom: 10px; /* Add some margin below the textarea */
+        }
+        #ask-container {
+            display: flex; 
+            justify-content: flex-end; 
+            margin-top: 10px; 
+        }
+        #ask{
+            margin: 10px;
+        }
+        #output {
+            margin: 0 auto;
+            margin-top: 30px;
+            width: 80%; /* Adjust width as needed */
+            overflow-y: auto; /* Enable vertical scrolling if needed */
+            max-height: 300px; /* Limit the height to prevent output from overflowing */
+        }
+        
+    </style>
+</head>
+
+<body>
+    <h1>Youtube Summariser</h1>
+    <div id="summarise-container">
+        <button id="summarise" type="button">Summarise</button>
+    </div>
+    <br />
+    <p id="output"></p>
+
+    <div id="question-container">
+        <h2>How can I assist you today?</h2>
+        <div id="ask-container"> 
+            <textarea id="question" rows="4" cols="50"></textarea>
+            <button id="ask" type="button">Ask</button>
+        </div>
+    </div>
+    <p id="answer"></p>
+
+    <script src="popup.js"></script>
+</body>
+
+</html>
+
+
+<!-- <!DOCTYPE html>
+<html>
+
+<head>
+    <title>Youtube Transcript Summariser</title>
+    <style>
+        h1 {
+            text-align: center;
+            padding: 10px;
+        }
+
+        body {
+            width: max-content;
+            max-width: 800px;
+            background-color: blueviolet;
+        }
+
+        button {
+            background-color: red;
+            color: white;
+            border-radius: 8px;
+            width: max-content;
+            height: max-content;
+            padding: 10px;
+            font-size: large;
+            margin: auto;
+            display: block;
+            border-color: coral;
+        }
+
+        button[disabled] {
+            background-color: lightcoral;
+            color: white;
+            border-radius: 8px;
+            width: max-content;
+            height: max-content;
+            padding: 10px;
+            font-size: large;
+            margin: auto;
+            display: block;
+            border-color: lightpink;
+        }
+
+        p {
+            font-size: medium;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Youtube Summariser</h1>
+    <button id="summarise" type="button">Summarise</button>
+    <br />
+    <p id="output"></p>
+
+    <h2>Ask a Question:</h2>
+    <textarea id="question" rows="4" cols="50"></textarea>
+    <br />
+    <button id="ask" type="button">Ask</button>
+    <p id="answer"></p>
+
+    <script src="popup.js"></script>
+</body>
+
+</html> -->
